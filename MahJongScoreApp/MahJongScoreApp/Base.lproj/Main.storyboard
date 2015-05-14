@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FAc-nr-XgO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-vS-0hx">
+                                <rect key="frame" x="157" y="319" width="46" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qOt-aR-e5n" kind="show" id="Wdn-T0-ouQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KcE-9l-z8Y"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SMb-zk-qjp"/>
+            </objects>
+            <point key="canvasLocation" x="677.5" y="58.5"/>
+        </scene>
+        <!--New Game-->
+        <scene sceneID="bmk-iq-c5x">
+            <objects>
+                <viewController id="qOt-aR-e5n" customClass="CreateGameViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5iw-Xd-lI4"/>
+                        <viewControllerLayoutGuide type="bottom" id="bSl-ip-OZB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wFa-ow-49V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-g8-Mbn">
+                                <rect key="frame" x="114" y="319" width="147" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB3-KC-3us">
+                                <rect key="frame" x="114" y="241" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Game" id="mvO-MC-OYe">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="MSA-pd-Cuh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="QGl-Cm-Yz5">
+                            <connections>
+                                <segue destination="iy1-4H-fTU" kind="show" id="uAE-0I-111"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="SessionNameTextField" destination="SrJ-g8-Mbn" id="uBt-L7-FQu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wk-AX-Qol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.5" y="-27.5"/>
+        </scene>
+        <!--New Game-->
+        <scene sceneID="XTn-IU-Otn">
+            <objects>
+                <viewController id="iy1-4H-fTU" customClass="SelectPlayersViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wh7-C4-2Xb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xxe-Nc-4Py"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jJC-mv-paG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-JS-ZTV">
+                                <rect key="frame" x="102" y="167" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-SJ-2BW">
+                                <rect key="frame" x="166" y="271" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="q8F-zY-2rQ"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="New Game" id="JDc-gZ-Wxl">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Uj2-xZ-umh">
+                            <connections>
+                                <action selector="saveGame:" destination="iy1-4H-fTU" id="UIq-5o-cw4"/>
+                                <segue destination="WIH-i6-Qyh" kind="popoverPresentation" popoverAnchorBarButtonItem="Uj2-xZ-umh" id="mwj-9D-Svu">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="TestLabel" destination="g5K-SJ-2BW" id="LLh-gA-pzi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2L-2l-tfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1625.5" y="-27.5"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="bkO-Oa-v3Y">
+            <objects>
+                <tableViewController title="Games" id="hNt-4d-oGg" customClass="GameTableViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" id="snd-pg-GJ0">
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Itg-0i-ByE" rowHeight="40" style="IBUITableViewCellStyleDefault" id="gd2-z4-3ep">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gd2-z4-3ep" id="Efr-P6-ayh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Itg-0i-ByE">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hNt-4d-oGg" id="KXI-2R-ZPq"/>
+                            <outlet property="delegate" destination="hNt-4d-oGg" id="Fgf-nA-5Md"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="SXf-wT-h0V"/>
+                        <barButtonItem title="Item" id="BwA-Mh-TK2"/>
+                        <barButtonItem title="Item" id="2ee-jB-46w"/>
+                        <barButtonItem title="Item" id="CPl-ix-oMb"/>
+                        <barButtonItem title="Item" id="5xa-h8-zZJ"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Rounds" id="tu7-0F-ygB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0zw-ez-Vic">
+                            <connections>
+                                <segue destination="jdl-kr-p7X" kind="show" id="pHg-37-Ay1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7DO-N1-bB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2635.5" y="-27.5"/>
+        </scene>
+        <!--Who won?-->
+        <scene sceneID="nHr-Cy-U5Y">
+            <objects>
+                <viewController id="jdl-kr-p7X" customClass="CreateRoundViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rBj-Bm-yLi"/>
+                        <viewControllerLayoutGuide type="bottom" id="kVY-9Q-CJb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ayv-ts-rDj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Billy" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-Et-0x9">
+                                <rect key="frame" x="81" y="164" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Who won?" id="X9f-id-Cet">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="NG0-Zl-vnZ">
+                            <connections>
+                                <segue destination="45x-7e-UZX" kind="show" id="OAp-Vb-lMj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="winner" destination="a8b-Et-0x9" id="EyN-KX-BRe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Rw-CK-jZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3078.5" y="-27.5"/>
+        </scene>
+        <!--How?-->
+        <scene sceneID="URi-Te-G9f">
+            <objects>
+                <viewController id="45x-7e-UZX" customClass="CreateRoundViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vNp-rW-Ef6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mr3-od-Qit"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kTC-JA-4DD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="How?" id="AOn-x8-kBQ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Ky6-B4-Nau">
+                            <connections>
+                                <segue destination="zDt-vO-wsc" kind="show" id="JuM-ne-8jE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmF-Cd-Gm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3543.5" y="-27.5"/>
+        </scene>
+        <!--How many fan?-->
+        <scene sceneID="c9r-5J-xUW">
+            <objects>
+                <viewController id="zDt-vO-wsc" customClass="CreateRoundViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="axH-CH-B82"/>
+                        <viewControllerLayoutGuide type="bottom" id="K1m-r5-tDp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="831-GK-EQH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="How many fan?" id="v2l-RK-bRH">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="hEr-Xv-yHx">
+                            <connections>
+                                <action selector="save:" destination="zDt-vO-wsc" id="Hp5-0G-Lgx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUh-mS-ShA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4014.5" y="-9.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WYL-0v-r0k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FAc-nr-XgO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fbj-pC-t3y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Sf0-sc-wcy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdS-qA-qwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.5" y="58.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IuU-Hc-AtI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WIH-i6-Qyh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BmR-AI-JkO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hNt-4d-oGg" kind="relationship" relationship="rootViewController" id="o3S-qE-6ap"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2b-CK-rHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2176.5" y="-75.5"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,4 +10,8 @@ import CoreData
 
 class Game : NSManagedObject {
     @NSManaged var name:String
+    @NSManaged var player1:Player
+    @NSManaged var player2:Player
+    @NSManaged var player3:Player
+    @NSManaged var player4:Player
 }

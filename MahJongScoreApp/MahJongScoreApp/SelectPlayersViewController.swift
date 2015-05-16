@@ -23,17 +23,34 @@ class SelectPlayersViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+   
+    @IBOutlet weak var player1TextField: UITextField!
+    @IBOutlet weak var player2TextField: UITextField!
+    @IBOutlet weak var player3TextField: UITextField!
+    @IBOutlet weak var player4TextField: UITextField!
+    
     var gameName:String!
     
-    @IBAction func saveGame(sender: AnyObject) {
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowGameTable"
+        {
+            saveGame()
+        }
+    }
+    
+    func saveGame() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext!
         
+        let player1Entity = NSEntityDescription.insertNewObjectForEntityForName("Player", inManagedObjectContext: managedContext) as! Player
+        player1Entity.name = player1TextField.text
+        
         let game = NSEntityDescription.insertNewObjectForEntityForName("Game", inManagedObjectContext: managedContext) as! Game
         
         game.name = gameName
+        
+        game.player1 = player1Entity
 
     }
     

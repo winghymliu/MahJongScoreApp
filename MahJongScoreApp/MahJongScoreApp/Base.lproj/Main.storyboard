@@ -34,7 +34,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="SMb-zk-qjp"/>
             </objects>
-            <point key="canvasLocation" x="677.5" y="58.5"/>
+            <point key="canvasLocation" x="652.5" y="895.5"/>
         </scene>
         <!--New Game-->
         <scene sceneID="bmk-iq-c5x">
@@ -64,9 +64,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Game" id="mvO-MC-OYe">
                         <barButtonItem key="backBarButtonItem" title="Back" id="MSA-pd-Cuh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="QGl-Cm-Yz5">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="fFh-1L-L6P">
                             <connections>
-                                <segue destination="iy1-4H-fTU" kind="show" id="uAE-0I-111"/>
+                                <segue destination="iy1-4H-fTU" kind="show" id="1am-Os-JtL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -93,17 +93,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-JS-ZTV">
-                                <rect key="frame" x="102" y="167" width="171" height="21"/>
+                                <rect key="frame" x="102" y="155" width="171" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-SJ-2BW">
-                                <rect key="frame" x="166" y="271" width="42" height="21"/>
+                                <rect key="frame" x="166" y="80" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLi-1x-o8j">
+                                <rect key="frame" x="117" y="214" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mr-Ag-Kyp">
+                                <rect key="frame" x="117" y="400" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-QE-FRB">
+                                <rect key="frame" x="117" y="309" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A92-1i-fra">
+                                <rect key="frame" x="117" y="485" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MqA-Qk-9TP">
+                                <rect key="frame" x="117" y="255" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppT-1M-EDK">
+                                <rect key="frame" x="117" y="348" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPC-i5-ovP">
+                                <rect key="frame" x="117" y="439" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nie-nn-VnT">
+                                <rect key="frame" x="117" y="535" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VS-Hj-9WX">
+                                <rect key="frame" x="117" y="535" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -113,10 +162,8 @@
                     <navigationItem key="navigationItem" title="New Game" id="JDc-gZ-Wxl">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="Uj2-xZ-umh">
                             <connections>
-                                <action selector="saveGame:" destination="iy1-4H-fTU" id="UIq-5o-cw4"/>
-                                <segue destination="WIH-i6-Qyh" kind="popoverPresentation" popoverAnchorBarButtonItem="Uj2-xZ-umh" id="mwj-9D-Svu">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="saveGame:" destination="iy1-4H-fTU" id="stw-UI-Qkj"/>
+                                <segue destination="WIH-i6-Qyh" kind="show" identifier="ShowGameTable" id="ows-bJ-miA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -124,6 +171,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="TestLabel" destination="g5K-SJ-2BW" id="LLh-gA-pzi"/>
+                        <outlet property="player1TextField" destination="MqA-Qk-9TP" id="rSc-Yp-0xn"/>
+                        <outlet property="player2TextField" destination="ppT-1M-EDK" id="nmA-ws-gg1"/>
+                        <outlet property="player3TextField" destination="VPC-i5-ovP" id="5bU-wJ-Gg5"/>
+                        <outlet property="player4TextField" destination="5VS-Hj-9WX" id="Qud-26-ook"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2L-2l-tfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,6 +219,11 @@
                         <barButtonItem title="Item" id="5xa-h8-zZJ"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Rounds" id="tu7-0F-ygB">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="NhQ-os-aT8">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="PD3-i6-pJM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0zw-ez-Vic">
                             <connections>
                                 <segue destination="jdl-kr-p7X" kind="show" id="pHg-37-Ay1"/>
@@ -183,7 +239,7 @@
         <!--Who won?-->
         <scene sceneID="nHr-Cy-U5Y">
             <objects>
-                <viewController id="jdl-kr-p7X" customClass="CreateRoundViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jdl-kr-p7X" customClass="WhoWonViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rBj-Bm-yLi"/>
                         <viewControllerLayoutGuide type="bottom" id="kVY-9Q-CJb"/>
@@ -197,6 +253,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egf-HF-9E2">
+                                <rect key="frame" x="81" y="267" width="230" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -210,6 +272,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="player1" destination="egf-HF-9E2" id="XxY-Lh-7l9"/>
                         <outlet property="winner" destination="a8b-Et-0x9" id="EyN-KX-BRe"/>
                     </connections>
                 </viewController>
@@ -220,7 +283,7 @@
         <!--How?-->
         <scene sceneID="URi-Te-G9f">
             <objects>
-                <viewController id="45x-7e-UZX" customClass="CreateRoundViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="45x-7e-UZX" customClass="HowTheyWonViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vNp-rW-Ef6"/>
                         <viewControllerLayoutGuide type="bottom" id="Mr3-od-Qit"/>
@@ -246,7 +309,7 @@
         <!--How many fan?-->
         <scene sceneID="c9r-5J-xUW">
             <objects>
-                <viewController id="zDt-vO-wsc" customClass="CreateRoundViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zDt-vO-wsc" customClass="HowManyFanViewController" customModule="MahJongScoreApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="axH-CH-B82"/>
                         <viewControllerLayoutGuide type="bottom" id="K1m-r5-tDp"/>
@@ -286,7 +349,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdS-qA-qwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.5" y="58.5"/>
+            <point key="canvasLocation" x="512.5" y="-69.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IuU-Hc-AtI">
@@ -304,7 +367,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2b-CK-rHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2176.5" y="-75.5"/>
+            <point key="canvasLocation" x="2160.5" y="-27.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Sf0-sc-wcy"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -2,12 +2,20 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Game" representedClassName="MahJongScoreApp.Game" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="player1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
+        <relationship name="player2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
+        <relationship name="player3" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
+        <relationship name="player4" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
+    </entity>
+    <entity name="Player" representedClassName="MahJongScoreApp.Player" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Round" representedClassName="MahJongScoreApp.Round" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Round" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="Game" positionX="-63" positionY="-9" width="128" height="60"/>
+        <element name="Game" positionX="-243" positionY="-99" width="128" height="118"/>
+        <element name="Round" positionX="-72" positionY="-168" width="128" height="60"/>
+        <element name="Player" positionX="-9" positionY="-54" width="128" height="58"/>
     </elements>
 </model>

@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9B29FAD11B054D21007EB348 /* SelectPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */; };
+		9B29FAD31B07689B007EB348 /* WhoWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD21B07689B007EB348 /* WhoWonViewController.swift */; };
+		9B29FAD51B076A55007EB348 /* HowTheyWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD41B076A55007EB348 /* HowTheyWonViewController.swift */; };
+		9B29FAD71B076A75007EB348 /* HowManyFanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD61B076A75007EB348 /* HowManyFanViewController.swift */; };
+		9B29FAD91B07769B007EB348 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD81B07769B007EB348 /* Player.swift */; };
 		9B8F4E381AFE533E004EB324 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F4E371AFE533E004EB324 /* GameModel.swift */; };
 		9B8F4E3C1AFE7CDC004EB324 /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F4E3B1AFE7CDC004EB324 /* CreateGameViewController.swift */; };
-		9B973E321AFFCA9C00EE09F4 /* CreateRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B973E311AFFCA9C00EE09F4 /* CreateRoundViewController.swift */; };
 		9BB85AC91AFE407500D2B06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB85AC81AFE407500D2B06F /* AppDelegate.swift */; };
 		9BB85ACC1AFE407500D2B06F /* MahJongScoreApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BB85ACA1AFE407500D2B06F /* MahJongScoreApp.xcdatamodeld */; };
 		9BB85ACE1AFE407500D2B06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB85ACD1AFE407500D2B06F /* ViewController.swift */; };
@@ -35,9 +38,12 @@
 
 /* Begin PBXFileReference section */
 		9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPlayersViewController.swift; sourceTree = "<group>"; };
+		9B29FAD21B07689B007EB348 /* WhoWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoWonViewController.swift; sourceTree = "<group>"; };
+		9B29FAD41B076A55007EB348 /* HowTheyWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowTheyWonViewController.swift; sourceTree = "<group>"; };
+		9B29FAD61B076A75007EB348 /* HowManyFanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowManyFanViewController.swift; sourceTree = "<group>"; };
+		9B29FAD81B07769B007EB348 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9B8F4E371AFE533E004EB324 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		9B8F4E3B1AFE7CDC004EB324 /* CreateGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameViewController.swift; sourceTree = "<group>"; };
-		9B973E311AFFCA9C00EE09F4 /* CreateRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoundViewController.swift; sourceTree = "<group>"; };
 		9BB85AC31AFE407500D2B06F /* MahJongScoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MahJongScoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB85AC71AFE407500D2B06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BB85AC81AFE407500D2B06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B29FADA1B077A4E007EB348 /* CreateGame */ = {
+			isa = PBXGroup;
+			children = (
+				9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */,
+				9B8F4E3B1AFE7CDC004EB324 /* CreateGameViewController.swift */,
+			);
+			name = CreateGame;
+			sourceTree = "<group>";
+		};
+		9B29FADB1B078375007EB348 /* CreateRound */ = {
+			isa = PBXGroup;
+			children = (
+				9B29FAD21B07689B007EB348 /* WhoWonViewController.swift */,
+				9B29FAD41B076A55007EB348 /* HowTheyWonViewController.swift */,
+				9B29FAD61B076A75007EB348 /* HowManyFanViewController.swift */,
+			);
+			name = CreateRound;
+			sourceTree = "<group>";
+		};
 		9BB85ABA1AFE407500D2B06F = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +161,7 @@
 			children = (
 				9BF7EF861AFF5FE60035B33F /* Game.swift */,
 				9BF7EF8B1AFF61250035B33F /* Round.swift */,
+				9B29FAD81B07769B007EB348 /* Player.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -143,11 +169,10 @@
 		9BF7EF881AFF60250035B33F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B8F4E3B1AFE7CDC004EB324 /* CreateGameViewController.swift */,
+				9B29FADB1B078375007EB348 /* CreateRound */,
+				9B29FADA1B077A4E007EB348 /* CreateGame */,
 				9BB85ACD1AFE407500D2B06F /* ViewController.swift */,
 				9BF7EF891AFF60720035B33F /* GameTableViewController.swift */,
-				9B973E311AFFCA9C00EE09F4 /* CreateRoundViewController.swift */,
-				9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -252,16 +277,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B29FAD51B076A55007EB348 /* HowTheyWonViewController.swift in Sources */,
 				9BF7EF8A1AFF60720035B33F /* GameTableViewController.swift in Sources */,
 				9BB85ACE1AFE407500D2B06F /* ViewController.swift in Sources */,
 				9BF7EF871AFF5FE60035B33F /* Game.swift in Sources */,
 				9BB85AC91AFE407500D2B06F /* AppDelegate.swift in Sources */,
+				9B29FAD91B07769B007EB348 /* Player.swift in Sources */,
 				9BB85ACC1AFE407500D2B06F /* MahJongScoreApp.xcdatamodeld in Sources */,
+				9B29FAD71B076A75007EB348 /* HowManyFanViewController.swift in Sources */,
 				9B8F4E381AFE533E004EB324 /* GameModel.swift in Sources */,
 				9BF7EF8C1AFF61250035B33F /* Round.swift in Sources */,
+				9B29FAD31B07689B007EB348 /* WhoWonViewController.swift in Sources */,
 				9B29FAD11B054D21007EB348 /* SelectPlayersViewController.swift in Sources */,
 				9B8F4E3C1AFE7CDC004EB324 /* CreateGameViewController.swift in Sources */,
-				9B973E321AFFCA9C00EE09F4 /* CreateRoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,6 +36,10 @@ class SelectPlayersViewController: UIViewController {
         {
             saveGame()
         }
+        
+        var destination = segue.destinationViewController as! UINavigationController
+        let svc = destination.topViewController as! GameTableViewController
+        svc.gameName = gameName
     }
     
     func saveGame() {

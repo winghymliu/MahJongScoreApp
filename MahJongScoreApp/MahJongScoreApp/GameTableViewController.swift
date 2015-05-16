@@ -13,11 +13,10 @@ import CoreData
 class GameTableViewController: UITableViewController {
     
     var rounds = [Round]()
-    
+    var gameName:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -28,6 +27,7 @@ class GameTableViewController: UITableViewController {
         rounds = managedContext.executeFetchRequest(freq, error: nil) as! [Round]
           */              
         tableView.reloadData()
+        self.title = gameName
     }
     
     override func didReceiveMemoryWarning() {

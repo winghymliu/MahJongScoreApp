@@ -12,22 +12,25 @@ import CoreData
 
 class GameTableViewController: UITableViewController {
     
-    var rounds = [Round]()
     var gameName:String!
+    var rounds:[Round] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        //let managedContext = appDelegate.managedObjectContext!
-        /*
-        let freq = NSFetchRequest(entityName: "Round")
+        let managedContext = appDelegate.managedObjectContext!
+        let fetchRequest = NSFetchRequest(entityName:"Game")
+        let fetchedGames =
+        managedContext.executeFetchRequest(fetchRequest, error : nil) as! [Game]
         
-        rounds = managedContext.executeFetchRequest(freq, error: nil) as! [Round]
-          */              
+        let games = fetchedGames.filter {$0.name == self.gameName}
+        let game = games[0]
+        
+        self.title = self.gameName
+        rounds = game.rounds.allObjects as! [Round]
         tableView.reloadData()
-        self.title = gameName
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,7 +49,7 @@ class GameTableViewController: UITableViewController {
         
         var cell : UITableViewCell  = tableView.dequeueReusableCellWithIdentifier(cellId) as! UITableViewCell
         
-        cell.textLabel!.text = rounds[indexPath.row].name as String
+        cell.textLabel!.text = self.rounds[indexPath.row].name as String
        
         return cell
     }
@@ -58,7 +61,7 @@ class GameTableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
         if editingStyle == .Delete{
             if let tv = tableView {
-                rounds.removeAtIndex(indexPath!.row)
+                self.rounds.removeAtIndex(indexPath!.row)
                 tv.deleteRowsAtIndexPaths( [indexPath!], withRowAnimation: .Fade)
             }
         } else if editingStyle == .Insert{

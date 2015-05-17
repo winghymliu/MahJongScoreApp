@@ -53,7 +53,7 @@ class SelectPlayersViewController: UIViewController {
         let game = NSEntityDescription.insertNewObjectForEntityForName("Game", inManagedObjectContext: managedContext) as! Game
         
         game.name = gameName
-        
+        game.rounds = Set<Round>()
         game.player1 = player1Entity
 
     }

@@ -6,16 +6,19 @@
         <relationship name="player2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
         <relationship name="player3" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
         <relationship name="player4" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
+        <relationship name="rounds" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Round" inverseName="game" inverseEntity="Round" syncable="YES"/>
     </entity>
     <entity name="Player" representedClassName="MahJongScoreApp.Player" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="games" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" syncable="YES"/>
     </entity>
     <entity name="Round" representedClassName="MahJongScoreApp.Round" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="rounds" inverseEntity="Game" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="-243" positionY="-99" width="128" height="118"/>
-        <element name="Round" positionX="-72" positionY="-168" width="128" height="60"/>
-        <element name="Player" positionX="-9" positionY="-54" width="128" height="58"/>
+        <element name="Game" positionX="-243" positionY="-99" width="128" height="133"/>
+        <element name="Player" positionX="-396" positionY="-171" width="128" height="73"/>
+        <element name="Round" positionX="-72" positionY="-168" width="128" height="73"/>
     </elements>
 </model>

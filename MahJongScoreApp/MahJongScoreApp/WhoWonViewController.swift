@@ -9,8 +9,12 @@
 import UIKit
 import CoreData
 
-class WhoWonViewController: UIViewController {
+class WhoWonViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    var gameId:NSManagedObjectID!
+    var game:Game!
+    var players:[Player]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,35 +22,37 @@ class WhoWonViewController: UIViewController {
         
         let managedContext = appDelegate.managedObjectContext!
         
-        let fetchRequest = NSFetchRequest(entityName:"Game")
+        let game = managedContext.existingObjectWithID(gameId, error: nil) as! Game
         
-        let fetchError: NSError?
-        
-        let fetchedGames =
-        managedContext.executeFetchRequest(fetchRequest, error : nil) as! [Game]
-        
-        let games = fetchedGames.filter {$0.name == "gameone"}
-        let game = games[0]
-        player1.text = game.player1.name
+        players = [game.player1, game.player2, game.player3, game.player4]
+        WhoWonPicker.dataSource = self
+        WhoWonPicker.delegate = self
     }
-
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return players.count;
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return players[row].name
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBOutlet weak var player1: UILabel!
+    @IBOutlet weak var WhoWonPicker: UIPickerView!
     @IBOutlet weak var winner: UITextField!
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let svc = segue.destinationViewController as! HowTheyWonViewController
+        svc.gameId = self.gameId
+        svc.winnerPlayerId = players[WhoWonPicker.selectedRowInComponent(0)].objectID
     }
-    */
+
 
 }

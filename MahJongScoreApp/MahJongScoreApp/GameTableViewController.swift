@@ -12,24 +12,24 @@ import CoreData
 
 class GameTableViewController: UITableViewController {
     
-    var gameName:String!
+    var gameId:NSManagedObjectID!
+    var game:Game!
     var rounds:[Round] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext!
         let fetchRequest = NSFetchRequest(entityName:"Game")
-        let fetchedGames =
-        managedContext.executeFetchRequest(fetchRequest, error : nil) as! [Game]
+        game = managedContext.existingObjectWithID(gameId, error: nil) as! Game
         
-        let games = fetchedGames.filter {$0.name == self.gameName}
-        let game = games[0]
-        
-        self.title = self.gameName
+        self.title = self.game.name
         rounds = game.rounds.allObjects as! [Round]
+        
         tableView.reloadData()
     }
     
@@ -69,4 +69,13 @@ class GameTableViewController: UITableViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowWhoWon"
+        {
+            let svc = segue.destinationViewController as! WhoWonViewController
+            svc.gameId = self.gameId
+
+        }
+    }
+
 }

@@ -10,7 +10,11 @@ import CoreData
 import UIKit
 
 class HowManyFanViewController: UIViewController {
-
+    
+    var gameId:NSManagedObjectID!
+    var game:Game!
+    var winnerPlayerId:NSManagedObjectID!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,29 +26,22 @@ class HowManyFanViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var winner:String!
-    
     @IBAction func save(sender: AnyObject) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext!
         
+        self.game = managedContext.existingObjectWithID(gameId, error: nil) as! Game
+        
         let round =  NSEntityDescription.insertNewObjectForEntityForName("Round", inManagedObjectContext: managedContext) as! Round
+        let winner = managedContext.existingObjectWithID(self.winnerPlayerId, error: nil) as! Player
         
-        let winnerName = winner
-        round.name = winnerName
+        round.name = winner.name
+        round.game = self.game
         
+        self.game.rounds.addObject(round)
+
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

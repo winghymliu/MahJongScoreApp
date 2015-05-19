@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class HowTheyWonViewController: UIViewController {
 
+    var winnerPlayerId:NSManagedObjectID!
+    var gameId:NSManagedObjectID!
+    var game:Game!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +25,10 @@ class HowTheyWonViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let svc = segue.destinationViewController as! HowManyFanViewController
+        svc.winnerPlayerId = self.winnerPlayerId
+        svc.gameId = self.gameId
     }
-    */
 
 }

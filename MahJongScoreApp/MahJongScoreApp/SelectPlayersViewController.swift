@@ -32,34 +32,48 @@ class SelectPlayersViewController: UIViewController {
     var gameName:String!
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowGameTable"
-        {
-            saveGame()
-        }
+        
+        let gameId = saveGame()        
         
         var destination = segue.destinationViewController as! UINavigationController
         let svc = destination.topViewController as! GameTableViewController
-        svc.gameName = gameName
+        svc.gameId = gameId
     }
     
-    func saveGame() {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    func saveGame() -> NSManagedObjectID {
         
-        let managedContext = appDelegate.managedObjectContext!
-        
-        let player1Entity = NSEntityDescription.insertNewObjectForEntityForName("Player", inManagedObjectContext: managedContext) as! Player
+        let player1Entity = createEntity("Player") as! Player
+        let player2Entity = createEntity("Player") as! Player
+        let player3Entity = createEntity("Player") as! Player
+        let player4Entity = createEntity("Player") as! Player
         player1Entity.name = player1TextField.text
+        player2Entity.name = player2TextField.text
+        player3Entity.name = player3TextField.text
+        player4Entity.name = player4TextField.text
         
-        let game = NSEntityDescription.insertNewObjectForEntityForName("Game", inManagedObjectContext: managedContext) as! Game
+        let game = createEntity("Game") as! Game
         
         game.name = gameName
-        game.rounds = Set<Round>()
+        game.rounds = NSMutableSet()
+        
+        let round = createEntity("Round") as! Round
+        round.name = "HEY"
+        game.rounds.addObject(round)
         game.player1 = player1Entity
+        game.player2 = player2Entity
+        game.player3 = player3Entity
+        game.player4 = player4Entity
 
+        return game.objectID
     }
     
     @IBOutlet weak var TestLabel: UILabel!
 
-    
+    func createEntity(entityName:String) -> AnyObject{
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        return NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: managedContext)
+    }
 
 }

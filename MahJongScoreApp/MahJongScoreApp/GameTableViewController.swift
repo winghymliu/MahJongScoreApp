@@ -48,9 +48,9 @@ class GameTableViewController: UITableViewController {
         let cellId:String = "Cell"
         
         var cell : UITableViewCell  = tableView.dequeueReusableCellWithIdentifier(cellId) as! UITableViewCell
-        
-        cell.textLabel!.text = self.rounds[indexPath.row].name as String
-       
+        let round = self.rounds[indexPath.row]
+        let text = round.name + " won " + String(round.fan)
+        cell.textLabel!.text = text
         return cell
     }
     

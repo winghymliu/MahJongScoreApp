@@ -314,6 +314,11 @@
                     <view key="view" contentMode="scaleToFill" id="831-GK-EQH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQa-9b-jGZ">
+                                <rect key="frame" x="0.0" y="210" width="375" height="162"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="How many fan?" id="v2l-RK-bRH">
@@ -324,6 +329,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="fanPickerView" destination="fQa-9b-jGZ" id="Vil-cC-pwL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUh-mS-ShA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

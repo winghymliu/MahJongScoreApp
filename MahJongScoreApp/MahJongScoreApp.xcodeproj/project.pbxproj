@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1AC7F21B10C166007EF5FD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AC7F11B10C166007EF5FD /* Result.swift */; };
 		9B29FAD11B054D21007EB348 /* SelectPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */; };
 		9B29FAD31B07689B007EB348 /* WhoWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD21B07689B007EB348 /* WhoWonViewController.swift */; };
 		9B29FAD51B076A55007EB348 /* HowTheyWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD41B076A55007EB348 /* HowTheyWonViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B1AC7F11B10C166007EF5FD /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPlayersViewController.swift; sourceTree = "<group>"; };
 		9B29FAD21B07689B007EB348 /* WhoWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoWonViewController.swift; sourceTree = "<group>"; };
 		9B29FAD41B076A55007EB348 /* HowTheyWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowTheyWonViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				9B9235A21B090EA400187458 /* Player.swift */,
 				9B9235A01B090EA400187458 /* Round.swift */,
 				9B92359E1B090EA300187458 /* Game.swift */,
+				9B1AC7F11B10C166007EF5FD /* Result.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				9BF7EF8A1AFF60720035B33F /* GameTableViewController.swift in Sources */,
 				9BB85ACE1AFE407500D2B06F /* ViewController.swift in Sources */,
 				9BB85AC91AFE407500D2B06F /* AppDelegate.swift in Sources */,
+				9B1AC7F21B10C166007EF5FD /* Result.swift in Sources */,
 				9BB85ACC1AFE407500D2B06F /* MahJongScoreApp.xcdatamodeld in Sources */,
 				9B9235A31B090EA400187458 /* Player.swift in Sources */,
 				9B29FAD71B076A75007EB348 /* HowManyFanViewController.swift in Sources */,

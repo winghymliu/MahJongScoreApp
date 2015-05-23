@@ -10,8 +10,9 @@ import Foundation
 import CoreData
 
 class Round: NSManagedObject {
-
+    
     @NSManaged var name: String
     @NSManaged var game: Game
+    @NSManaged var fan: Int
 
 }

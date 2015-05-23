@@ -55,10 +55,7 @@ class SelectPlayersViewController: UIViewController {
         
         game.name = gameName
         game.rounds = NSMutableSet()
-        
-        let round = createEntity("Round") as! Round
-        round.name = "HEY"
-        game.rounds.addObject(round)
+
         game.player1 = player1Entity
         game.player2 = player2Entity
         game.player3 = player3Entity

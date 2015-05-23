@@ -48,17 +48,37 @@ class HowManyFanViewController: UIViewController, UIPickerViewDataSource, UIPick
         let managedContext = appDelegate.managedObjectContext!
         
         self.game = managedContext.existingObjectWithID(gameId, error: nil) as! Game
-        
-        let round =  NSEntityDescription.insertNewObjectForEntityForName("Round", inManagedObjectContext: managedContext) as! Round
         let winner = managedContext.existingObjectWithID(self.winnerPlayerId, error: nil) as! Player
         
+        let round =  createEntity("Round") as! Round
+        
         round.name = winner.name
+        round.winner = winner
         round.fan = fans[fanPickerView.selectedRowInComponent(0)]
         round.game = self.game
+        
+        let winningResult1 = createEntity("Result") as! Result
+        let score = calculateScore(round.fan)
+        winningResult1.winnings = score
+        winningResult1.player = winner
+        winningResult1.round = round;
+        
+        round.winningResult = winningResult1
         
         self.game.rounds.addObject(round)
 
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    func calculateScore(fan:Int) -> Int32 {
+        return Int32(pow(Double(2), Double(fan)))
+    }
+    
+    func createEntity(entityName:String) -> AnyObject{
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        return NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: managedContext)
     }
 
 }

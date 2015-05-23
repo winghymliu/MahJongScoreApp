@@ -14,5 +14,7 @@ class Round: NSManagedObject {
     @NSManaged var name: String
     @NSManaged var game: Game
     @NSManaged var fan: Int
+    @NSManaged var winner: Player
+    @NSManaged var winningResult: Result
 
 }

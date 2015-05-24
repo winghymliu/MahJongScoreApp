@@ -54,7 +54,7 @@ class HowManyFanViewController: UIViewController, UIPickerViewDataSource, UIPick
         
         round.name = winner.name
         round.winner = winner
-        round.fan = fans[fanPickerView.selectedRowInComponent(0)]
+        round.fan = Int32(fans[fanPickerView.selectedRowInComponent(0)])
         round.game = self.game
         
         let winningResult1 = createEntity("Result") as! Result
@@ -70,7 +70,7 @@ class HowManyFanViewController: UIViewController, UIPickerViewDataSource, UIPick
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
-    func calculateScore(fan:Int) -> Int32 {
+    func calculateScore(fan:Int32) -> Int32 {
         return Int32(pow(Double(2), Double(fan)))
     }
     

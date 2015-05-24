@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9B1AC7F21B10C166007EF5FD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AC7F11B10C166007EF5FD /* Result.swift */; };
+		9B2747811B11EB4200CC4E36 /* RoundDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2747801B11EB4200CC4E36 /* RoundDetailsViewController.swift */; };
+		9B2747831B11F39C00CC4E36 /* GameTableCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2747821B11F39C00CC4E36 /* GameTableCellViewController.swift */; };
 		9B29FAD11B054D21007EB348 /* SelectPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */; };
 		9B29FAD31B07689B007EB348 /* WhoWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD21B07689B007EB348 /* WhoWonViewController.swift */; };
 		9B29FAD51B076A55007EB348 /* HowTheyWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29FAD41B076A55007EB348 /* HowTheyWonViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		9B1AC7F11B10C166007EF5FD /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		9B2747801B11EB4200CC4E36 /* RoundDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundDetailsViewController.swift; sourceTree = "<group>"; };
+		9B2747821B11F39C00CC4E36 /* GameTableCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableCellViewController.swift; sourceTree = "<group>"; };
 		9B29FAD01B054D21007EB348 /* SelectPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPlayersViewController.swift; sourceTree = "<group>"; };
 		9B29FAD21B07689B007EB348 /* WhoWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoWonViewController.swift; sourceTree = "<group>"; };
 		9B29FAD41B076A55007EB348 /* HowTheyWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowTheyWonViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 				9B29FADA1B077A4E007EB348 /* CreateGame */,
 				9BB85ACD1AFE407500D2B06F /* ViewController.swift */,
 				9BF7EF891AFF60720035B33F /* GameTableViewController.swift */,
+				9B2747801B11EB4200CC4E36 /* RoundDetailsViewController.swift */,
+				9B2747821B11F39C00CC4E36 /* GameTableCellViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,12 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B2747811B11EB4200CC4E36 /* RoundDetailsViewController.swift in Sources */,
 				9B29FAD51B076A55007EB348 /* HowTheyWonViewController.swift in Sources */,
 				9BF7EF8A1AFF60720035B33F /* GameTableViewController.swift in Sources */,
 				9BB85ACE1AFE407500D2B06F /* ViewController.swift in Sources */,
 				9BB85AC91AFE407500D2B06F /* AppDelegate.swift in Sources */,
 				9B1AC7F21B10C166007EF5FD /* Result.swift in Sources */,
 				9BB85ACC1AFE407500D2B06F /* MahJongScoreApp.xcdatamodeld in Sources */,
+				9B2747831B11F39C00CC4E36 /* GameTableCellViewController.swift in Sources */,
 				9B9235A31B090EA400187458 /* Player.swift in Sources */,
 				9B29FAD71B076A75007EB348 /* HowManyFanViewController.swift in Sources */,
 				9B92359F1B090EA300187458 /* Game.swift in Sources */,

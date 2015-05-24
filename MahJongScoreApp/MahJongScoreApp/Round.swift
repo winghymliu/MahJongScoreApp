@@ -13,7 +13,7 @@ class Round: NSManagedObject {
     
     @NSManaged var name: String
     @NSManaged var game: Game
-    @NSManaged var fan: Int
+    @NSManaged var fan: Int32
     @NSManaged var winner: Player
     @NSManaged var winningResult: Result
 

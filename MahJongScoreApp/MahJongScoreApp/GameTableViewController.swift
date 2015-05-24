@@ -50,7 +50,8 @@ class GameTableViewController: UITableViewController {
         var cell : UITableViewCell  = tableView.dequeueReusableCellWithIdentifier(cellId) as! UITableViewCell
         let round = self.rounds[indexPath.row]
         let text = round.winner.name + " won " + String(round.fan) + " worth " + String(round.winningResult.winnings);
-        cell.textLabel!.text = text
+            cell.detailTextLabel?.text = text
+        cell.textLabel!.text = round.winner.name
         return cell
     }
     
@@ -69,12 +70,22 @@ class GameTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let row = indexPath.row
+        let round = self.rounds[row]
+        //self.performSegueWithIdentifier("RoundDetails", sender: "Yo")
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowWhoWon"
         {
             let svc = segue.destinationViewController as! WhoWonViewController
             svc.gameId = self.gameId
-
+        } else if segue.identifier == "RoundDetails"{
+            let svc = segue.destinationViewController as! RoundDetailsViewController
+            if let roundsIndex = tableView.indexPathForSelectedRow()?.row {
+                svc.round = self.rounds[roundsIndex]
+            }
         }
     }
 

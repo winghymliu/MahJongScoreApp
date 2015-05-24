@@ -13,7 +13,7 @@
         <relationship name="games" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" syncable="YES"/>
     </entity>
     <entity name="Result" representedClassName="MahJongScoreApp.Result" syncable="YES">
-        <attribute name="winnings" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="winnings" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
         <relationship name="round" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" syncable="YES"/>
     </entity>
@@ -21,13 +21,14 @@
         <attribute name="fan" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="rounds" inverseEntity="Game" syncable="YES"/>
+        <relationship name="loserResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Result" syncable="YES"/>
         <relationship name="winner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
         <relationship name="winningResult" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Result" syncable="YES"/>
     </entity>
     <elements>
         <element name="Game" positionX="-243" positionY="-99" width="128" height="133"/>
         <element name="Player" positionX="-396" positionY="-171" width="128" height="73"/>
-        <element name="Round" positionX="-72" positionY="-168" width="128" height="118"/>
         <element name="Result" positionX="-216" positionY="-63" width="128" height="90"/>
+        <element name="Round" positionX="-72" positionY="-168" width="128" height="135"/>
     </elements>
 </model>

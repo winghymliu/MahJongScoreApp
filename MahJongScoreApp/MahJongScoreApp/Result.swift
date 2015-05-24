@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 class Result : NSManagedObject {
-    @NSManaged var winnings : Int32
+    @NSManaged var winnings : Double
     @NSManaged var player : Player
     @NSManaged var round : Round
 }

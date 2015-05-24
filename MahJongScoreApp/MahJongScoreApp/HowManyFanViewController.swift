@@ -57,21 +57,34 @@ class HowManyFanViewController: UIViewController, UIPickerViewDataSource, UIPick
         round.fan = Int32(fans[fanPickerView.selectedRowInComponent(0)])
         round.game = self.game
         
-        let winningResult1 = createEntity("Result") as! Result
-        let score = calculateScore(round.fan)
-        winningResult1.winnings = score
-        winningResult1.player = winner
-        winningResult1.round = round;
+        let resultEntityName = "Result"
+        let winningResult = createEntity(resultEntityName) as! Result
+        let winnings = calculateScore(round.fan)
+        winningResult.winnings = winnings
+        winningResult.player = winner
+        winningResult.round = round;
         
-        round.winningResult = winningResult1
+        for player in [game.player1, game.player2, game.player3, game.player4]{
+            
+            if player.objectID != winner.objectID{
+                let loserResult = createEntity(resultEntityName) as! Result
+                loserResult.winnings = -1.0
+                loserResult.player = player
+                loserResult.round = round;
+                round.loserResults.addObject(loserResult)
+            }
+        }
+        
+        round.winningResult = winningResult
+        
         
         self.game.rounds.addObject(round)
 
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
-    func calculateScore(fan:Int32) -> Int32 {
-        return Int32(pow(Double(2), Double(fan)))
+    func calculateScore(fan:Int32) -> Double {
+        return pow(Double(2), Double(fan))
     }
     
     func createEntity(entityName:String) -> AnyObject{

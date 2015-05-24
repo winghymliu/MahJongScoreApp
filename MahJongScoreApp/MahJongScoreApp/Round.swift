@@ -16,5 +16,5 @@ class Round: NSManagedObject {
     @NSManaged var fan: Int32
     @NSManaged var winner: Player
     @NSManaged var winningResult: Result
-
+    @NSManaged var loserResults: NSMutableSet
 }

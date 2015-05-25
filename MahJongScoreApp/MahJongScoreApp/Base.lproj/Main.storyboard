@@ -163,7 +163,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="Uj2-xZ-umh">
                             <connections>
                                 <action selector="saveGame:" destination="iy1-4H-fTU" id="stw-UI-Qkj"/>
-                                <segue destination="WIH-i6-Qyh" kind="show" identifier="ShowGameTable" id="ows-bJ-miA"/>
+                                <segue destination="WIH-i6-Qyh" kind="showDetail" identifier="ShowGameTable" id="ows-bJ-miA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
